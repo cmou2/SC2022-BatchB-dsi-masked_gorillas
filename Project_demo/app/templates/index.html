@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title style="font-family: Arial">Predicting the median housing prices of a city in California</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/favicon.ico')}}" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    </head>
+    <!-- Do not touch anything before this -->
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top" style="font-family: Arial" style="font-size:24px">California Housing Prices Predictor</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about" style="font-family: Arial" style="font-size:24px">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pipeline" style="font-family: Arial" style="font-size:24px">Project Pipeline</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services" style="font-family: Arial" style="font-size:24px">Exploration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact" style="font-family: Arial" style="font-size:24px">Machine learning</a></li>
+                        <li class="nav-item"><a class = "nav-link" href="#Conclusion" style="font-family: Arial" style="font-size:24px">Conclusion</a></li>
+                        <li class="nav-item"><a class =" nav-link" href="#Try " style="font-family: Arial" style="font-size:24px">Try it</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team" style="font-family: Arial" style="font-size:24px">Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder" style="font-family: Arial" style="font-size:24px">California Housing Prices Prediction</h1>
+                <p class="lead" style="font-family: Arial" style="font-size:24px">Predicting housing value in California based on a variety of factors.</p>
+                <a class="btn btn-lg btn-light" href="#pipeline" style="font-family: Arial" style="font-size:24px">See our work below</a>
+            </div>
+        </header>
+        <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">What does the project do?
+                        </h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">We used a data set we found on Kaggle that holds 20,000 entries from the 1990 census about housing prices. It contains information like location, median house age, total rooms, and the  median house value. Our goal is to find patterns among these features and predict California housing prices.</p>
+                      <img src="{{url_for('static', filename='images/Image of California2.png')}}" class="page-image" width="800"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pipeline section-->
+        <section id="pipeline">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">How does our project work?
+                        </h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">The following display shows the pipeline for our project:</p>
+                      <img src="{{url_for('static', filename='images/Flow Chart.gif')}}" class="page-image" width="800"/>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-start p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                                <h2 class="fs-4 fw-bold" style="font-family: Arial">Data Collection</h2>
+                                <p class="mb-0" style="font-family: Arial" style="font-size:24px">Data collection is the process of gathering and measuring information from countless different sources.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-start p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold" style="font-family: Arial">Exploratory Data Analysis</h2>
+                                <p class="mb-0" style="font-family: Arial" style="font-size:24px">
+                              We used the following plots to display our work:
+                              <li style="font-family: Arial" style="font-size:24px">A Correlation Table Heat Map.</li>
+                              <li style="font-family: Arial" style="font-size:24px">A Pie Chart that displays houses proximity to the bay.</li>
+                              <li style="font-family: Arial" style="font-size:24px">Two scatter plots, one displaying the housing median age of houses and their locations, and the other displaying the housing median price and their locations.</li>
+                              <li style="font-family: Arial" style="font-size:24px">A histogram that showed the distribution of the median house value in California.</li>
+                              <li style="font-family: Arial" style="font-size:24px">A bar chart that displays the RMSE (root mean squared error) of each machine learning model.</li></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-start p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                                <h2 class="fs-4 fw-bold" style="font-family: Arial">Data Processing</h2>
+                                <p class="mb-0" style="font-family: Arial" style="font-size:24px">
+                              We did the following for data processing:
+                              <li style="font-family: Arial" style="font-size:24px">We implemented data imputation and standardization for numerical features.</li>
+                              <li style="font-family: Arial" style="font-size:24px">We added one-hot encoding for categorical features.</li>
+                              <li style="font-family: Arial" style="font-size:24px">We performed train test split.</li></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-start p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                                <h2 class="fs-4 fw-bold" style="font-family: Arial">Machine Learning Modeling</h2>
+                                <p class="mb-0" style="font-family: Arial" style="font-size:24px">
+                              We used the following machine learning models for our machine learning modeling:
+                              <li style="font-family: Arial" style="font-size:24px">Linear Regression.</li>
+                              <li style="font-family: Arial" style="font-size:24px">Support Vector Machine Regressor.</li>
+                              <li style="font-family: Arial" style="font-size:24px">K Nearest Neighbors.</li>
+                              <li style="font-family: Arial" style="font-size:24px"> Random Forest.</li>
+                              <li style="font-family: Arial" style="font-size:24px">Lasso</li></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-start p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                                <h2 class="fs-4 fw-bold" style="font-family: Arial">Model Deployment</h2>
+                                <p class="mb-0" style="font-family: Arial" style="font-size:24px">
+                              We used the following tools for our model deployment:
+                              <li style="font-family: Arial" style="font-size:24px">Bootstrap</li>
+                                  <li style="font-family: Arial" style="font-size:24px">Flask</li></p>
+                            </div>
+                        </div>
+                    </div>
+                  
+                 
+
+                  
+                  
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                    <h1 id="top-level-heading">Exploration</h1><br/>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 style="font-family: Arial">Exploration of data: Correlation table heat map</h3>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">First, we created a correlation table to see how different features related to housing prices in California. This heat map shows the correlation between all of our factors. The lighter the square, the more the factors relate to each other. For example, the heat map is lightest when two of the same factors are being compared. Total bedrooms and total rooms relate to each other because it can be assumed that if there are more bedrooms in a house, there are more rooms in total compared to houses with few bedrooms. Similarly, we can see that the squares are darker for comparing total rooms and housing age. This tells us that the age of the house does not affect how many rooms it has! </p>
+                    <iframe width="900" height="900" title="Correlation Table of Features" src="{{url_for('static', filename='correlation_heatmap.html')}}"></iframe> <br>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 style="font-family: Arial">Exploration of data: Pie Chart</h3>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">Pie charts clearly demonstrate to us the part to whole relationship, showing us the percentage of how close each house is to the ocean. From this graph we can infer that majority of cities, where the majority of homes are located, are more than one hour from the ocean.</p>
+                        <iframe width="700" height="700" title="Scatter plots of features in relation to GDP" src="{{url_for('static', filename='income_scatterplots.html')}}"></iframe> <br><br>
+                    </div>
+                  <div class="col-lg-8">
+                        <h3 style="font-family: Arial">Exploration of data: Scatterplot</h3>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">Scatterplots graphs 3 sets of numerical data, with one variable on each axis, to look for a relationship between them. This Scatter Plot shows us the age of each of our 20,000 houses along California. From this Graph we can infer that majority of the house are older in San Jose and Cities near there. </p>
+                        <iframe width="700" height="700" title="Scatterplots of features in relation to GDP" src="{{url_for('static', filename='Housing_Age.html')}}"></iframe> <br><br>
+                    </div>
+                  <div class="col-lg-8">
+                        <h3 style="font-family: Arial">Exploration of data: Histogram</h3>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">A histogram is a bar graph-like representation of data that buckets a range of classes into columns along the horizontal x-axis. The vertical y-axis represents the number count or percentage of occurrences in the data for each column.This Histogram shows us how much each of our 20,000 houses in California is worth. As we can see the majority of the houses are between 65,000 to 190,000. A higher bar means more houses. Since the bars are higher between 65,000 and 190,000, we can deduce that the most common value of a house in California is about 150,000. The bars are lower between 300,000 and 475,000, which tells us that the least common housing value in California is about 400,000. Strangely, the housing value skyrockets at 500,000!</p>
+                        <iframe width="700" height="700" title="Scatterplots of features in relation to GDP" src="{{url_for('static', filename='Hist.html')}}"></iframe> <br><br>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3 style="font-family: Arial">Visualization of crucial features</h3>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">The most crucial factor in our data set that we have to analyze is housing value. We compare this factor to others to see which variable affects the housing value the most!</p>
+                        <iframe width="800" height="800" title="Map of California housing values" src="{{url_for('static', filename='median_house_value2.html')}}"></iframe>  
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 style="font-family: Arial">Machine Learning</h1></br>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Linear Regression: Explanation</h2>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+                        In the most simple words, Linear Regression is the supervised Machine Learning model in which the model finds the best fit linear line between the independent and dependent variable i.e it finds the linear relationship between the dependent and independent variable.
+                      </p>
+                        <h3 style="font-family: Arial">Assumptions: </h3>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+                          <li class="lead" style="font-family: Arial" style="font-size:24px">Linearity: It states that the dependent variable Y should be linearly related to independent variables.</li>
+                          <li class="lead" style="font-family: Arial" style="font-size:24px">Normality: The X and Y variables should be normally distributed.</li>
+                          <li class="lead" style="font-family: Arial" style="font-size:24px">Homoscedasticity: The variance of the error terms should be constant i.e the spread of residuals should be constant for all values of X. This assumption can be checked by plotting a residual plot. If the assumption is violated then the points will form a funnel shape otherwise they will be constant.</li>
+                          <li class="lead" style="font-family: Arial" style="font-size:24px"> Independence/No Multicollinearity: The variables should be independent of each other i.e no correlation should be there between the independent variables. To check the assumption, we can use a correlation matrix or VIF score. If the VIF score is greater than 5 then the variables are highly correlated.</li>
+                      <li class="lead" style="font-family: Arial" style="font-size:24px"> The error terms should be normally distributed.</li>
+                      <li class="lead" style="font-family: Arial" style="font-size:24px">No Autocorrelation: The error terms should be independent of each other. </li></p>
+                        <img width="700" height="600" src="{{url_for('static', filename='images/Linear_Regression_image2.png')}}" class="page-image" />
+                    </div>
+
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Linear Regression: RMSE</h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">RMSE is an acronym for Root Mean Square Error, which is the square root of value obtained from Mean Square Error function. Using RMSE, we can easily plot a difference between the estimated and actual values of a parameter of the model. By this, we can clearly judge the efficiency of the model. In this model we calculated an RMSE of 70060.</p>
+                        
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Support Vector Machine Regressor: Explanation</h2>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">Support Vector Machine, or SVR, is unlike other regression models in that it doesn't try to minimize the error between the real and predicted value. Instead, it tries to find the best fit line within a threshold value and the distance between the hyperplane and boundary line, and then uses that to make a prediction.
+                      </p>
+                      <h3 style="font-family: Arial">Assumptions:</h3>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">
+                          <li class="lead" style="font-family: Arial" style="font-size:24px">The dependent variable is numerical rather than categorical.</li><li class="lead" style="font-family: Arial" style="font-size:24px">Unlike SLR, whose results depend on Gauss-Markov assumptions, the output model from SVR does not depend on distributions of the underlying dependent and independent variables.</li><li class="lead" style="font-family: Arial" style="font-size:24px">The SVR technique depends on kernel functions.</li>
+                      </p>
+                        <img src="{{url_for('static', filename='SVR.png')}}" class="page-image" width="500"/>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Support Vector Machine Regressor: Results</h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">SVR used grid search to calculate the Mean Squared Error of our data set. The output number is risk function corresponding to the predicted value of the squared error loss. We use the number in our code to measure how close a regression line is to different variables.In this model we calculated an RMSE of 71646, but this is to be expected, as our data covers all of California and is not specific enough when applying to exact cities. SVR involves two parameters: the regularization parameter (often referred to as C) and the error sensitivity parameter (often referred to as ϵ). In this model we got a regularization parameter of 1000 and an sensitivity parameter of 0.01.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">K Nearest Neighbors: Explanation</h2>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+                        K Nearest Neighbor, or KNN, is a non-parametric regression method that, in an intuitive manner, approximates the association between independent variables and the continuous outcome by averaging the observations in the same neighborhood.
+                      </p>
+                        <h3 style="font-family: Arial">Assumptions:</h3>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+                      <li class="lead" style="font-family: Arial" style="font-size:24px">Similar things exist in close proximity. In other words, similar things are near to each other. The KNN algorithm hinges on this assumption being true enough for the algorithm to be useful. KNN captures the idea of similarity (sometimes called distance, proximity, or closeness) with calculating the distance between points on a graph.
+                      </p>
+                        <img src="{{url_for('static', filename='images/Knearestneighbordisplay.png')}}" class="page-image" width="500"/>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">K Nearest Neighbors: RMSE</h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">The size of the neighborhood needs to be set by the analyst or can be chosen using cross-validation to select the size that minimizes the mean-squared error. Our K Nearest Neighbor for our data set is 11, which represents the ideal neighborhood to use in our code to decide which factors relate most. The RMSE corresponds to the square root of the average difference between the observed known outcome values and the predicted values.In this model we calculated an RMSE of 60788, but this is to be expected, as our data covers all of California and is not specific enough when applying to exact cities.</p>
+                    </div>
+               <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Random Forest: Explanation</h2>
+                
+<br>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+The bootstrapping Random Forest algorithm combines ensemble learning methods with the decision tree framework to create several randomly drawn decision trees from the data, averaging the results to output a new result that often leads to strong predictions.
+                      </p>
+                        <h3 style="font-family: Arial">Assumptions:</h3>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+                        <li class="lead" style="font-family: Arial" style="font-size:24px">The input data is continuous, and the target variable is discrete</li><li class="lead" style="font-family: Arial" style="font-size:24px">The input data contains multiple variables, and each variable has only one level</li><li class="lead" style="font-family: Arial" style="font-size:24px">There are no missing values in the input data</li><li class="lead" style="font-family: Arial" style="font-size:24px">The data is distributed normally.</li>
+                      </p>
+                        <img src="{{url_for('static', filename='images/rf_regressor.jpg')}}" class="page-image" width="700"/>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Random Forest: RMSE</h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">The random forest gives a error of 81684, which is to be expected, as our data are mostly numerical features, not categorical one. Therefore, the tree-based model normally does not show a better performance than KNN,</p>
+                    </div>
+                             <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Lasso Regressor: Explanation</h2>
+<br>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">Lasso regression analysis is a shrinkage and variable selection method for linear regression models. The goal of lasso regression is to obtain the subset of predictors that minimizes prediction error for a quantitative response variable.
+</p>
+                        <h3 style="font-family: Arial">Assumptions:</h3>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+                        <li class="lead" style="font-family: Arial" style="font-size:24px">Lasso regression uses shrinkage, where the data values are shrunk towards a central point such as the mean value.</li>
+                        <li class="lead" style="font-family: Arial" style="font-size:24px">The lasso regression allows you to shrink or regularize these coefficients to avoid overfitting and make them work better on different datasets.</li>
+                        <li class="lead" style="font-family: Arial" style="font-size:24px">Lasso is a supervised regularization method used in machine learning.</li>
+                        <li class="lead" style="font-family: Arial" style="font-size:24px">In statistics and machine learning, lasso (least absolute shrinkage and selection operator; also Lasso or LASSO) is a regression analysis method that performs both variable selection and regularization in order to enhance the prediction accuracy and interpretability of the resulting statistical model.</li>
+                      </p>
+                        <img src="{{url_for('static', filename='images/1_P3bTxrYuLGhF5-m0WEgomQ.png')}}" class="page-image" width="700"/>
+                    </div>
+                 <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Lasso Regression: RMSE</h2>
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">Mean squared error (MSE) is the average of the summation of the squared difference between the actual output value and the predicted output value. Our goal is to reduce the MSE as much as possible.The root mean squared error (RMSE) is just simply the square root of the MSE. This model calculated a RMSE of 70060.45879184718.</p>
+                    </div>
+              <div class="col-lg-8">
+                        <h2 style="font-family: Arial">Model Comparison</h2>
+
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">KNN is the best model based on this information. This is likely because, due to the large amount/variety of data, which makes a prediction based on an a line of best fit less useful. This makes KNN more accurate than the other models because it uses the distance between data points to make a prediction.</p>
+                 <iframe width="800" height="800" src="{{url_for('static', filename='BarChart.html')}}"></iframe>
+            </div>
+           </div>
+        </section>
+        <section class="bg-light" id="Conclusion">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                    <h1 id="top-level-heading" style="font-family: Arial">Conclusion</h1><br/>
+                    </div>
+                    <div class="col-lg-8">
+                      <br>
+                      <br>
+ <p class="lead" style="font-family: Arial" style="font-size:24px">
+To summarize, we he have developed a regression AI that is able to predict a house’s value in California based on factors like age, location, total rooms, etc. 
+We created graphs such as Pie Chart, Scatter Plot, and Histogram to analyze and understand our data.
+We utilized algorithms like K Nearest Neighbor and Random Forest Generator to sort our data with supervised machine learning. Our data has revealed that a higher income equals a higher house value, however, a higher total room count shows to bring the house value up, too.
+ </p>
+
+                        <h3 style="font-family: Arial">So what?</h3>
+
+                        <p class="lead" style="font-family: Arial" style="font-size:24px">Our research is significant because we have identified and analyzed the primary factors that raise housing value. Our product is useful because it provides a simple way to find an accurate listing price.</p>
+                      <h3 style="font-family: Arial">What is the use case for our Product?</h3>
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">Our product gives an accurate house value to agents, homeowners, and buyers. Our product is useful for agents seeking out a quick way to get a house value estimate for their clients. It's also helpful for homeowners who want to keep track of their house's value. Our product can help buyers who want to know the average price for a house with the amenities they want.</p>
+                      <h3 style="font-family: Arial">Who could be potential Buyers and Users?</h3>
+
+                      <p class="lead" style="font-family: Arial" style="font-size:24px">
+Potential users are homeowners may find this very useful when looking to sell or buy a house as to know what they want and what the right price for that house is. Potential Buyers could be Real Estate Companies who are looking to own it so that their agents can use it to help their customers find and buy the right house.
+                      </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+      
+      <section id="Try">
+         <h3 id="top-level-heading" style="font-family: Arial">Try it</h3>
+        <p class="lead" style="font-family: Arial" style="font-size:24px">Description: This form allows you to enter your own information and then get a message back telling you what the approximate value of your house should be. To use this form enter your longitude, latitude, housing median age, total rooms, total bedrooms, population, households, median income, and ocean proximity </p>
+<p class="lead" style="font-family: Arial" style="font-size:24px">Type in your correct information for numerical questions. Or pick the correct Categorical value.</p>
+         <p class="lead"> </p>
+      <form action = "" method = "post" class = "row row-cols-lg-auto g-3 align-items-center">
+          <div class = "col" >
+             
+              <!-- Longtitude -->
+              <div class = "input-field col s4">
+                  <label for="Longitude"><b>Longitude</b></label>
+                  <br>
+                  <input id = "Longitude" name = "Longitude" type = "number" placeholder="Enter Longitude" class="validate" value = -120>
+            </div>
+            <!-- Latitude -->
+            <div class = "input-field col s4">
+                  <label for="Latitude"><b>Latitude</b></label>
+                  <br>
+                  <input id = "Latitude" name = "Latitude" type = "number" placeholder="Enter Latitude" class="validate" value = 36>
+            </div>
+              <!-- housing median age -->
+              <div class = "input-field col s4">
+                  <label for="housing median age"><b>Housing Median Age</b></label>
+                  <br>
+                  <input id = "housing median age" name = "housing median age" type = "number" placeholder="housing median age" class="validate" value = 30>
+              </div>
+            
+              <!-- Total Rooms -->
+              <div class = "input-field col s4">
+                  <label for="total rooms"><b>Total Rooms</b></label>
+                  <br>
+                  <input id = "total rooms" name = "total rooms" type = "number" placeholder="No of rooms" class="validate" value = 2635>
+              </div>
+            
+              <!-- total bedrooms -->
+              <div class = "input-field col s4">
+                  <label for="total bedrooms"><b>Total Bedrooms</b></label>
+                  <br>
+                  <input id = "total bedrooms" name = "total bedrooms" type = "number" placeholder="No of bedrooms" class="validate" value = 537>
+              </div>
+            
+              <!-- Population -->
+              <div class = "input-field col s4">
+                  <label for="Population"><b>Population</b></label>
+                  <br>
+                  <input id = "Population" name = "Population" type = "number" placeholder="No of Population" class="validate" value = 1425>
+              </div>
+              <div class="w-100"></div>
+              <br>
+              <!-- households -->
+              <div class = "input-field col s4">
+                  <label for="Households"><b>Households</b></label>
+                  <br>
+                  <input id = "Households" name = "Households" type = "number" placeholder="No of Households" class="validate" value = 500>
+              </div>
+              <div class="w-100"></div>
+              <br>
+            
+              <!-- Median Income -->
+              <div class = "input-field col s4">
+                  <label for="median income"><b>Median Income</b></label>
+                  <br>
+                  <input id = "median income" name = "median income" type = "number" placeholder="Enter median income" class="validate" value = 3.8>
+              </div>
+
+         
+              <!-- Ocean proximity -->
+              <div class = "input-field col s4">
+                  <label for="ocean proximity"><b>Ocean Proximity</b></label>
+                  <br>
+                  <input list="ocean proximity" name="Ocean Proximity" placeholder="NEAR BAY, <1H OCEAN, INLAND, NEAR OCEAN, ISLAND" value = "NEAR OCEAN">
+                    <datalist id="ocean proximity">
+                      <option value="NEAR BAY">
+                      <option value="<1H OCEAN">
+                      <option value="INLAND">
+                      <option value="NEAR OCEAN">
+                      <option value="ISLAND">
+                    </datalist>
+              </div>
+  <!-- nothing left -->
+          <div class="justify-content-center">
+              <button type="submit" class="btn btn-primary btn-l text-uppercase">Submit</button>
+              <br>
+          </div>
+
+        </div>
+
+      </form>
+        
+        <p style="font-size: 24px">{{return_text}}</p>
+      
+      
+      
+      </section>
+      
+ 
+
+        <section style="margin-left: 80px; margin-right: 80px;" id="team">
+        <header class="bg-primary text-center py-5 mb-4">
+            <div class="container px-4">
+              <h1 class="fw-light text-white">Meet Team Masked Gorillas</h1>
+            </div>
+          </header>
+          
+          <!-- Page Content -->
+          <div class="container px-4">
+            <div class="row">
+              <!-- Team Member 1 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/Image_of_Nathan.png')}}" height="330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Nathan Zhao</h5>
+                    <div class="card-text text-black-50">Ai Camp Student</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Team Member 2 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/Cassidy.jpg')}}" height="330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Cassidy Blackwood</h5>
+                    <div class="card-text text-black-50">Ai Camp Student</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Team Member 3 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/Jackson Pirooz.png')}}" height="330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Jackson Pirooz</h5>
+                    <div class="card-text text-black-50">Ai Camp Student</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Team Member 4 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/Alex.jpeg')}}" height="330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Alex Kingman</h5>
+                    <div class="card-text text-black-50">Ai Camp Student</div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- /.row -->
+                 <!-- Page Content -->
+          <div class="container px-4">
+            <div class="row">
+              <!-- Team Member 5 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/rohan_img.png')}}" height = "330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Julian Allen</h5>
+                    <div class="card-text text-black-50">Ai Camp Student</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Team Member 6 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/William_picture.jpg')}}" height="330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">William Seneviratne</h5>
+                    <div class="card-text text-black-50">Ai Camp Student</div>
+                  </div>
+                </div>
+              </div>
+              <!-- Team Member 7 -->
+              <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{url_for('static', filename='images/Jonathan Mou.jpeg')}}" height="330" class="card-img-top" alt="...">
+                  <div class="card-body text-center">
+                    <h5 class="card-title mb-0">Chunjiang (Jonathan) Mou</h5>
+                    <div class="card-text text-black-50">Project Mentor</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+          </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; AI Camp 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+  <!-- Do not touch anything after this -->
+    </body>
+</html>
+2>
